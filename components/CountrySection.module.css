@@ -1,0 +1,59 @@
+.section{
+    width: 80vw;
+    height: 100%;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px
+}
+
+.image{
+    width: 320px;
+    height: 200px;
+}
+
+.name{
+    margin-left: 20px;
+}
+
+.dataContainer{
+    height: 100%;
+    width: 50vw;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.subDataContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    align-self: center;
+    justify-content: center;
+}
+
+.borders{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.h4border{
+    width:fit-content;
+    margin-left: 20px;
+}
+
+.dataLine{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 35px;
+}
+
+.p{
+    margin-left: 5px;
+}
