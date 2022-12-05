@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: black;
+  background: var(--background-color);
 }
 
 a {
@@ -20,14 +22,12 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: hsl(207, 26%, 17%);
-  }
+:root {
+  --background-color: white;
+  --secondary-background-color: rgb(216, 216, 216);
+  --color: black;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap')
+
+

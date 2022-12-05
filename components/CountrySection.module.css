@@ -4,7 +4,8 @@
     padding: 100px 50px;
     display: flex;
     flex-direction: row;
-    gap: 100px
+    gap: 100px;
+    color: var(--color)
 }
 
 .image{
