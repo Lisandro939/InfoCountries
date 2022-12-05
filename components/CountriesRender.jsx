@@ -11,7 +11,7 @@ export default function CountriesRender({countries}) {
     return str.join(".");
 }
 
-  return (countries.slice(0, 10).map(country => (
+  return (countries.map(country => (
     <Link key={country.name.common} href={`/${country.name.common}`}>
       <article  className={styles.article}>
           <Image src={country.flags.png} alt='' width={100} height={100} className={styles.image} priority unoptimized={true}/>
