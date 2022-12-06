@@ -6,3 +6,4 @@ NEXT THINGS TO DO
 - [x] Style filter by region button
 - [ ] Style theme button
 - [ ] Style back button
+- [ ] Style border countries buttons 
