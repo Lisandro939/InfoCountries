@@ -8,6 +8,93 @@
     justify-content: center;
 }
 
+.containerSearcher {
+    width: 80vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input{
+    padding: 5px;
+    width: 300px;
+    border: 0px;
+    font-size: 15px;
+    border-radius: 10px;
+    box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
+-webkit-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
+-moz-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
+    background-color: var(--input-background-color);
+    color: var(--color);
+}
+
+.input::placeholder{
+    color: var(--color);
+    opacity: .5;
+}
+
+.input:focus{
+    outline: none;
+}
+
+.select{
+    border: 0px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
+    background-color: var(--input-background-color);
+    color: var(--color);
+}
+
+.select div{
+    background-color: red;
+}
+
+.select::placeholder{
+    opacity: .1;
+}
+
+.select option{
+    gap: 10px;
+    border: 0px;
+}
+
+.select:focus{
+    outline: none;
+}
+
+.searcher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--input-background-color);
+}
+
+.svg_icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .svg_icon path,
+  .svg_icon polygon,
+  .svg_icon rect {
+    fill: black;
+  }
+  
+  .svg_icon circle {
+    stroke: black;
+    stroke-width: 1;
+  }
+
 @media screen and (max-width: 1200px){
     .container{
         grid-template-columns: repeat(3, 18rem);

@@ -25,6 +25,7 @@ a {
 :root {
   --background-color: white;
   --secondary-background-color: rgb(216, 216, 216);
+  --input-background-color: white;
   --color: black;
 }
 

@@ -1,13 +1,18 @@
 import React from 'react'
 import Countries from '../components/Countries'
-import Searcher from '../components/Searcher'
 import styles from './page.module.css'
+import Head from 'next/head'
 
 export default function page() {
   return (
-    <div className={styles.container}>
-      <Searcher />
-      <Countries />
-    </div>
+    <>
+      <Head>
+        <title>Info Countries</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className={styles.container}>
+        <Countries />
+      </div>
+    </>
   )
 }

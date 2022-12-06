@@ -1,15 +1,109 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState} from 'react'
 import styles from './Countries.module.css'
 import CountriesRender from './CountriesRender';
 
-export default async function Countries() {
+export default function Countries() {
 
-    const countries = await fetchCountries();
+    const [countries, setCountries] = useState([]);
+    const [countriesPased, setCountriesPased] = useState(countries)
+    const [countrySearch, setCountrySearch] = useState("");
+    const [regionValue, setRegionValue] = useState("");
+    const [nameValue, setNameValue] = useState("");
+
+    const handleChangeSearcher = e => {
+      setNameValue(e.target.value)
+      setCountrySearch(e.target.value)
+      if (regionValue === ""){
+        filterByName(e.target.value)
+      } else {
+        filterByNameAndRegion(e.target.value, regionValue)
+      }
+      
+      
+    }
+
+    const handleChangeSelector = e => {
+      setRegionValue(e.target.value)
+      if (nameValue === ""){
+        filterByRegion(e.target.value)
+      } else {
+        filterByNameAndRegion(nameValue, e.target.value)
+      }
+      
+    }
+
+    const filterByName = (search) => {
+      var searchResults = countries.filter((element) => {
+        if (element.name.common.includes(search)){
+          return element;
+        }
+      })
+      setCountriesPased(searchResults)
+    }
+
+    const filterByNameAndRegion = (search, region) => {
+      var searchResults = countries.filter((element) => {
+        if (element.name.common.includes(search) && element.region.includes(region)){
+          return element;
+        }
+      })
+      setCountriesPased(searchResults)
+    }
+
+    const filterByRegion = (search) => {
+      const countriesArray = []
+      countries.filter((element) => {
+        if (element.region.includes(search)){
+          countriesArray.push(element)
+        }
+      })
+      console.log(countriesArray)
+      setCountriesPased(countriesArray)
+    }
+
+  useEffect(() => {
+    fetch('https://restcountries.com/v3.1/all')
+      .then(response => response.json())
+      .then(data => {
+        setCountries(data)
+        setCountriesPased(data)
+      })
+  },[])
 
   return (
-    <div className={styles.container}>
-        <CountriesRender countries={countries} />
-    </div>
+    <>
+      <div className={styles.containerSearcher}>
+        <div className={styles.searcher}>
+          <svg className={styles.svg_icon} viewBox="0 0 20 20">
+            <path d="M18.125,15.804l-4.038-4.037c0.675-1.079,1.012-2.308,1.01-3.534C15.089,4.62,12.199,1.75,8.584,1.75C4.815,1.75,1.982,4.726,2,8.286c0.021,3.577,2.908,6.549,6.578,6.549c1.241,0,2.417-0.347,3.44-0.985l4.032,4.026c0.167,0.166,0.43,0.166,0.596,0l1.479-1.478C18.292,16.234,18.292,15.968,18.125,15.804 M8.578,13.99c-3.198,0-5.716-2.593-5.733-5.71c-0.017-3.084,2.438-5.686,5.74-5.686c3.197,0,5.625,2.493,5.64,5.624C14.242,11.548,11.621,13.99,8.578,13.99 M16.349,16.981l-3.637-3.635c0.131-0.11,0.721-0.695,0.876-0.884l3.642,3.639L16.349,16.981z"></path>
+          </svg>
+          <input 
+          placeholder='Search for a country...'
+          value={countrySearch}
+          onChange={handleChangeSearcher}
+          className={styles.input}
+          />
+        </div>
+        
+        <select
+        onChange={handleChangeSelector}
+        className={styles.select}
+        placeholder="Region"
+        >
+          <option hidden selected value="">Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+      <div className={styles.container}>
+          <CountriesRender countries={countriesPased} />
+      </div>
+    </>
   )
 }
 

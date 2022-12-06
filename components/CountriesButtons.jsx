@@ -6,7 +6,6 @@ export default async function CountriesButtons({ codes }) {
     const codigos = codes.join(',')
 
     const countries = await fetchCountries(codigos)
-    console.log(countries)
     
   return countries.map(country => (
     <button key={country.name.common} className={styles.button}>

@@ -2,12 +2,17 @@ import React from 'react'
 import styles from './page.module.css'
 import Link from 'next/link'
 import CountrySection from '../../components/CountrySection'
+import Head from 'next/head'
 
 export default async function page({ params }) {
   const { country } = params
   const data = await fetchCountries(country)
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Info {country}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <header className={styles.header}>
         <Link href='/' className={styles.link}>Back</Link>
       </header>
