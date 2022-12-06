@@ -17,6 +17,9 @@ export default function CountrySection({ data }) {
     let claves2 = Object.keys(data.name.nativeName);
     const nativeName = data.name.nativeName[claves2[0]].official;
 
+    let claves3 = Object.keys(data.languages);
+    const language = data.languages[claves3[0]];
+
   return (
     <section className={styles.section}>
         <Image src={data.flags.png} alt='' width={100} height={100} priority unoptimized={true} className={styles.image}/>
@@ -39,7 +42,7 @@ export default function CountrySection({ data }) {
                     <h4>Region:</h4><p className={styles.p}>{data.region}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Languages:</h4><p className={styles.p}>{data.region}</p>
+                    <h4>Languages:</h4><p className={styles.p}>{language}</p>
                 </section>
                 <section className={styles.dataLine}>
                     <h4>Sub Region:</h4><p className={styles.p}>{data.subregion}</p>
