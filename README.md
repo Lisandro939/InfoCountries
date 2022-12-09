@@ -4,6 +4,7 @@ NEXT THINGS TO DO
 - [x] Style search button
 - [x] Add functionality to filter by region button
 - [x] Style filter by region button
-- [ ] Style theme button
+- [x] Style theme button
 - [ ] Style back button
 - [ ] Style border countries buttons 
+- [ ] Adapt to mobile version

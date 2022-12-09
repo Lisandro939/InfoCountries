@@ -23,10 +23,11 @@ a {
 }
 
 :root {
-  --background-color: white;
-  --secondary-background-color: rgb(216, 216, 216);
+  --background-color: hsl(0, 0%, 98%);
+  --secondary-background-color: white;
   --input-background-color: white;
   --color: black;
+  --outline: hsl(0, 0%, 97%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap')

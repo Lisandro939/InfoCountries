@@ -1,0 +1,11 @@
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 0px;
+    background-color: var(--secondary-background-color);
+    color: var(--color);
+    cursor: pointer;
+    gap: 10px;
+}
