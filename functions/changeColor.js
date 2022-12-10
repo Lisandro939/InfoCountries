@@ -16,7 +16,7 @@ export function changeColor (setIcon ,primera, setPrimera) {
       r.style.setProperty('--secondary-background-color', 'white')
       r.style.setProperty('--color', 'hsl(207, 26%, 17%)')
       r.style.setProperty('--input-background-color', 'white')
-      r.style.setProperty('--outline', 'hsl(0, 0%, 97%)')
+      r.style.setProperty('--outline', 'hsl(0, 0%, 90%)')
       setIcon(false)
     }
   }

@@ -27,7 +27,7 @@ a {
   --secondary-background-color: white;
   --input-background-color: white;
   --color: black;
-  --outline: hsl(0, 0%, 97%);
+  --outline: hsl(0, 0%, 90%);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap')

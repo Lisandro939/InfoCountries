@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './CountriesButtons.module.css'
+import Link from 'next/link'
 
 export default async function CountriesButtons({ codes }) {
 
@@ -8,9 +9,9 @@ export default async function CountriesButtons({ codes }) {
     const countries = await fetchCountries(codigos)
     
   return countries.map(country => (
-    <button key={country.name.common} className={styles.button}>
+    <Link key={country.name.common} className={styles.button} href={`/${country.name.common}`}>
         {country.name.common}
-    </button>
+    </Link>
   ))
 }
 

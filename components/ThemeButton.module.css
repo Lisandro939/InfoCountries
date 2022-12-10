@@ -2,10 +2,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     border: 0px;
     background-color: var(--secondary-background-color);
     color: var(--color);
     cursor: pointer;
     gap: 10px;
+    outline: 2px solid var(--outline);
+    border-radius: 5px;
+}
+
+.moon{
+    width: 15px;
+    height: 15px;
+}
+
+.moonFill{
+    width: 15px;
+    height: 15px;
+}
+
+@media screen and (max-device-width: 600px){
+    .button{
+        padding: 10px;
+        cursor: pointer;
+        gap: 10px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .moon{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .moonFill{
+        width: 25px;
+        height: 25px;
+    }
 }

@@ -1,3 +1,13 @@
 .button {
     margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 15px;
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-background-color);
+    outline: 2px solid var(--outline);
+    border: 0px;
+    font-size: 13px;
 }

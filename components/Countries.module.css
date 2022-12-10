@@ -23,8 +23,8 @@
     font-size: 15px;
     border-radius: 10px;
     box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
--webkit-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
--moz-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 20px 5px 35px -17px rgba(0,0,0,0.75);
     background-color: var(--input-background-color);
     color: var(--color);
 }
@@ -95,19 +95,19 @@
     stroke-width: 1;
   }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-device-width: 1200px){
     .container{
         grid-template-columns: repeat(3, 18rem);
     }
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-device-width: 900px){
     .container{
         grid-template-columns: repeat(2, 18rem);
     }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-device-width: 600px){
     .container{
         grid-template-columns: repeat(1, 18rem);
     }
