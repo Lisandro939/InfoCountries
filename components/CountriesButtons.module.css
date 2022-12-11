@@ -11,3 +11,13 @@
     border: 0px;
     font-size: 13px;
 }
+
+@media screen and (max-device-width: 600px){
+    .button {
+        margin-left: 10px;
+        border-radius: 3px;
+        padding: 30px 45px;
+        border: 0px;
+        font-size: 30px;
+    }
+}

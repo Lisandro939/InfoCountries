@@ -73,6 +73,9 @@
     padding: 10px;
     border-radius: 10px;
     background-color: var(--input-background-color);
+    box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 35px -17px rgba(0,0,0,0.75);
 }
 
 .svg_icon {

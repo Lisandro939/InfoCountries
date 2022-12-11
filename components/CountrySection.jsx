@@ -27,33 +27,35 @@ export default function CountrySection({ data }) {
             <h1 className={styles.name}>{data.name.common}</h1>
             <div className={styles.subDataContainer}>
                 <section className={styles.dataLine}>
-                    <h4>Native name:</h4><p className={styles.p}>{nativeName}</p>
+                    <h4 className={styles.h4}>Native name:</h4><p className={styles.p}>{nativeName}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Top Level Domain:</h4><p className={styles.p}>{data.tld[0]}</p>
+                    <h4 className={styles.h4}>Top Level Domain:</h4><p className={styles.p}>{data.tld[0]}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Population:</h4><p className={styles.p}>{separator(data.population)}</p>
+                    <h4 className={styles.h4}>Population:</h4><p className={styles.p}>{separator(data.population)}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Currencies:</h4><p className={styles.p}>{currencie}</p>
+                    <h4 className={styles.h4}>Currencies:</h4><p className={styles.p}>{currencie}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Region:</h4><p className={styles.p}>{data.region}</p>
+                    <h4 className={styles.h4}>Region:</h4><p className={styles.p}>{data.region}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Languages:</h4><p className={styles.p}>{language}</p>
+                    <h4 className={styles.h4}>Languages:</h4><p className={styles.p}>{language}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Sub Region:</h4><p className={styles.p}>{data.subregion}</p>
+                    <h4 className={styles.h4}>Sub Region:</h4><p className={styles.p}>{data.subregion}</p>
                 </section>
                 <section className={styles.dataLine}>
-                    <h4>Capital:</h4><p className={styles.p}>{data.capital}</p>
+                    <h4 className={styles.h4}>Capital:</h4><p className={styles.p}>{data.capital}</p>
                 </section>
             </div>
             <div className={styles.borders}>
                 <h4 className={styles.h4border}>Border countries:</h4>
-                <CountriesButtons codes={data.borders} />
+                <div className={styles.borderCountries}>
+                    <CountriesButtons codes={data.borders} />
+                </div>
             </div>
         </div>
     </section>
