@@ -30,7 +30,6 @@
     align-items: center;
     justify-content: flex-start;
     padding-left: 10%;
-    margin-bottom: 35px;
 }
 
 .h4{
@@ -58,6 +57,10 @@
 
     .article:hover{
         transform: scale(1);
+    }
+
+    .section {
+        margin-bottom: 35px;
     }
 
     .image {
