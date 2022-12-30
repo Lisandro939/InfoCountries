@@ -7,4 +7,5 @@ NEXT THINGS TO DO
 - [x] Style theme button
 - [x] Style back button
 - [x] Style border countries buttons 
-- [ ] Adapt to mobile version
+- [x] Adapt to mobile version
+- [ ] Fix mobile adaptation
