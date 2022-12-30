@@ -12,7 +12,7 @@
     font-size: 13px;
 }
 
-@media screen and (max-device-width: 600px){
+@media screen and (max-device-width: 600px) and (max-width: 600px){
     .button {
         margin-left: 10px;
         border-radius: 3px;

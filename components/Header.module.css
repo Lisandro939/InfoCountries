@@ -16,7 +16,7 @@
     font-size: x-large;
 }
 
-@media screen and (max-device-width: 600px){
+@media screen and (max-device-width: 600px) and (max-width: 600px){
     .container{
         height: 200px;
         justify-content: space-between;

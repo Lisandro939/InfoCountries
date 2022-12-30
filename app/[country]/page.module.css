@@ -27,7 +27,7 @@
     margin-right: 5px;
 }
 
-@media screen and (max-device-width: 600px){
+@media screen and (max-device-width: 600px) and (max-width: 600px){
 
     .header{
         width: 100vw;
